@@ -8,9 +8,14 @@ function diferenca(){
     const C = parseInt(document.getElementById('valor3').value);
     const resultado = document.getElementById('result');
     let mostrar = [A, B, C];
-    mostrar.sort();
+    mostrar.sort((a, b) => a - b);
+    const form = document.getElementById('tarefa');
     
-    resultado.textContent = `Os números em ordem crescente é assim:\n ${mostrar}`
+
+  //  if(form.reportValidity()){
+    //    ordenar.sort((a, b) => a - b)
+        resultado.textContent = `Os números em ordem crescente é assim:\n ${mostrar}`
+  //  }
 }
 
 document.getElementById('calculadora').addEventListener('click', diferenca);
